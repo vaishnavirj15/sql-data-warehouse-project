@@ -15,7 +15,7 @@ Parameters:
 
 Usage Example:
     EXEC bronze.load_bronze; After running the below script you can simply use this SQL statement
-    for doing exactly what the below code is doing.
+    for loading and truncating data instead of running the below command again and again.
 ===============================================================================
 */
 
