@@ -1,3 +1,17 @@
+/* 
+=================================================================================
+DDL commands are used for chaNging the structure of a database.
+=================================================================================
+DDL Script: Create Bronze Layer
+Script Purpose:
+           This script creates tables in the 'bronze' schema dropping any existing table
+           if exists.
+=================================================================================
+*/
+
+
+
+
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
 GO
