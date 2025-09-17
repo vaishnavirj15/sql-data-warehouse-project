@@ -1,4 +1,4 @@
-# Data Warehouse and Analytics Project
+# 💼Data Warehouse and Analytics Project
 
 
 Welcome to the **Data Warehouse Project & Analytics Project** repository! 🚀
@@ -6,7 +6,7 @@ This project demonstrates the design and implementation of a modern Data Warehou
 
 ---
 
-##👓📖 Project Overview
+## 📖Project Overview
 
 The project involves following steps -:
 - 1.**Data Architecture** : Designing a modern data warehouse architecture using medallion model consisting of three layers-: Bronze, Silver and Gold.
