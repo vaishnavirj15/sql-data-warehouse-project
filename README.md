@@ -46,7 +46,7 @@ SQL based analytics to deliver detailed insights.
 ## 🛠️ Tech Stack
 - **Database**: Microsoft SQL Server, SQL Server Express  
 - **ETL**: SQL, Stored Procedures, Python (optional automation)  
-- **Data Modeling**: Star Schema, Snowflake Schema  
+- **Data Modeling**: Star Schema
 - **Version Control**: Git & GitHub
 - **Designing**: Draw.io
 
