@@ -54,29 +54,33 @@ SQL based analytics to deliver detailed insights.
 
 ## 📂 Repository Structure  
 
-├── /datsets # consist of the source data required
-│ ├── /source_crm
-│ │ ├── cust_info
-│ │ ├── prd_info
-│ │ └── sales_details
-│ └── /source_erp
-│ ├── cust_az12
-│ ├── loc_a101
-│ └── px_cat_g1v2
-│
-├── /documents # Data Architecture diagram, Data model diagram, Data flow and integration diagram, naming convention and others
-│
-├── /scripts # SQL scripts for ETL process and DDL
-│ ├── /bronze # bronze layer ddl script and data loading script
-│ ├── /silver # silver layer ddl script and data transforming/loading script
-│ ├── /gold # gold layer view ddl script and data loading
-│ └── /init_database.sql # database and schema creation script
-│
-├── /test # SQL scripts to check data integrity, accuracy and consistency
-│ ├── quality_check.gold.sql
-│ └── quality_check.silver.sql
-│
-└── README.md # Project overview
+```  
+
+├── /datasets                 # Source data required  
+│   ├── /source_crm  
+│   │   ├── cust_info  
+│   │   ├── prd_info  
+│   │   └── sales_details  
+│   └── /source_erp  
+│       ├── cust_az12  
+│       ├── loc_a101  
+│       └── px_cat_g1v2  
+
+├── /documents                # Data architecture & model diagrams, naming conventions  
+
+├── /scripts                  # SQL scripts for ETL & DDL  
+│   ├── /bronze                # Bronze layer DDL & loading scripts  
+│   ├── /silver                # Silver layer transformation/loading scripts  
+│   ├── /gold                  # Gold layer views & loading scripts  
+│   └── init_database.sql      # Database & schema creation script  
+
+├── /test                     # Data integrity & quality check scripts  
+│   ├── quality_check.gold.sql  
+│   └── quality_check.silver.sql  
+
+└── README.md                 # Project overview  
+
+```   
 
 
 ---
