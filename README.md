@@ -152,7 +152,7 @@ SQL based analytics to deliver detailed insights.
 ├── /eda                     # Exploratory data analysis scripts  
 │    ├── /basic eda
        
-│    ├──reports
+│    ├── /reports
 
 └── README.md                 # Project overview  
 
