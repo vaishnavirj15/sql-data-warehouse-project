@@ -1,21 +1,52 @@
-# 💼Data Warehouse and Analytics Project
+# 📊 Customer & Sales Data Warehouse Project
 
 
-Welcome to the **Data Warehouse Project & Analytics Project** repository! 🚀
-This project demonstrates the design and implementation of a modern Data Warehouse using SQL Server. It covers the complete lifecycle of data engineering from ETL (Extract, Transform, Load) processes to data modeling and business analytics. Build as a portfolio project the goal here is to showcase end-to-end skills in data integration, warehousing, and reporting that support data-driven decision-making.
+Welcome to the **Customer & Sales Data Warehouse Project** repository! 🚀
+This project demonstrates the design and implementation of a modern Data Warehouse using SQL Server for a bike retail business selling bikes, parts, clothing, and accessories.
 
+It covers the complete lifecycle of data engineering — from ETL (Extract, Transform, Load) pipelines, layered architecture (Bronze → Silver → Gold), and data modeling (star schema) to business-ready analytics.
+
+The goal is to showcase end-to-end skills in data integration, warehousing, and reporting, enabling insights such as product performance, customer behavior, seasonal sales trends, and regional revenue distribution to support data-driven decision-making.
 ---
 
 ## 📖Project Overview
 
-The project involves following steps -:
-- 1.**Data Architecture** : Designing a modern data warehouse architecture using medallion model consisting of three layers-: Bronze, Silver and Gold.
-- 2.**ETL Pipelines** : Extracting, Transforming and loading data from source system to data warehouse.
-- 3.**Data Model**: Developing facts and dimensions tables for optimized analytics.
-- 4.**Analytics and Reporting**: Creating SQL-based reports and dashboards for querying.
+The workflow follows these major steps -:
+1. **Data Architecture** 🏗️  
+   - Designed a **three-layer Medallion model** (Bronze, Silver, Gold) for scalability and clarity.  
+   - Documented warehouse design with **ER diagrams & architecture flowcharts**.  
+   - *( `documents/DataWarehouse Architecture.png`)*  
+
+2. **ETL Pipelines** ⚙️  
+   - Built **Stored Procedures** for automated ETL from CRM & ERP systems.  
+   - Performed **data quality checks** (null handling, duplicates, referential integrity).  
+   - Integrated multiple data sources into a single warehouse.  
+
+3. **Data Modeling** 📊  
+   - Developed a **star schema** with `fact_sales`, `dim_customers`, `dim_products`, `dim_location`, and `dim_date`.  
+   - Created **business-friendly views** in the Gold layer.  
+
+4. **Analytics & Reporting** 📈  
+   - Delivered insights on:  
+     - 🛒 **Customer Behavior** → repeat buyers, customer segmentation  
+     - 🚲 **Product Performance** → top-selling categories (bikes, clothing, accessories)  
+     - 📆 **Sales Trends** → seasonal demand & regional distribution
 
 
 ---
+
+## 🔑 Key Features
+
+✔️ Bronze–Silver–Gold architecture (industry standard)  
+✔️ Automated ETL using Stored Procedures (truncate + insert strategy)  
+✔️ Star Schema Design with fact & dimension tables  
+✔️ Data Quality Checks at Silver & Gold stages  
+✔️ Business-ready Views for Power BI/Tableau dashboards  
+✔️ End-to-End Flow: ETL → Modeling → Analytics  
+✔️ Industry-specific insights for Bike Retail (bikes, parts, clothing, accessories)
+
+
+----
 
 
 ## 📝Project Requirements
@@ -39,6 +70,94 @@ SQL based analytics to deliver detailed insights.
 - **Customer Behaviour**
 - **Product Performance**
 - **Sales Trend**
+
+---
+# 🚴 Customer & Sales Data Warehouse Project
+
+Welcome to the **Customer & Sales Data Warehouse Project** repository! 🚀  
+This project demonstrates the design and implementation of a **modern Data Warehouse for a Bike Retail business** selling bikes, parts, clothing, and accessories.
+
+It covers the complete lifecycle of **data engineering** — from ETL (Extract, Transform, Load) pipelines, layered architecture (Bronze → Silver → Gold), and data modeling (star schema) to **business-ready analytics**.
+
+The goal is to showcase end-to-end skills in **data integration, warehousing, and reporting**, enabling insights such as **product performance, customer behavior, seasonal sales trends, and regional revenue distribution** to support data-driven decision-making.
+
+---
+
+## 📖 Project Overview
+
+The workflow follows these major steps:
+
+### 1. Data Architecture 🏗️
+- Designed a **three-layer Medallion model** (Bronze, Silver, Gold) for scalability and clarity.  
+- Documented warehouse design with **ER diagrams & architecture flowcharts**.  
+- *(Insert Warehouse Architecture Diagram here: `documents/DataWarehouse_Architecture.png`)*
+
+### 2. ETL Pipelines ⚙️
+- Built **Stored Procedures** for automated ETL from CRM & ERP systems.  
+- Performed **data quality checks** (null handling, duplicates, referential integrity).  
+- Integrated multiple data sources into a single warehouse.
+
+### 3. Data Modeling 📊
+- Developed a **star schema** with `fact_sales`, `dim_customers`, `dim_products`, `dim_location`, and `dim_date`.  
+- Created **business-friendly views** in the Gold layer.
+
+### 4. Analytics & Reporting 📈
+- Delivered insights on:
+  - 🛒 **Customer Behavior** → repeat buyers, customer segmentation  
+  - 🚲 **Product Performance** → top-selling categories (bikes, clothing, accessories)  
+  - 📆 **Sales Trends** → seasonal demand & regional distribution
+
+---
+
+## 🔑 Key Features
+
+✔️ Bronze–Silver–Gold architecture (industry standard)  
+✔️ Automated ETL using Stored Procedures (truncate + insert strategy)  
+✔️ Star Schema Design with fact & dimension tables  
+✔️ Data Quality Checks at Silver & Gold stages  
+✔️ Business-ready Views for Power BI/Tableau dashboards  
+✔️ End-to-End Flow: ETL → Modeling → Analytics  
+✔️ Industry-specific insights for Bike Retail (bikes, parts, clothing, accessories)
+
+---
+
+## ⚙️ Process Breakdown
+
+### 1. Database & Schema Setup
+- Created new database `DataWarehouse`  
+- Defined schemas: `bronze`, `silver`, `gold`
+
+### 2. Bronze Layer (Raw Data Ingestion)
+- Created DDL scripts for raw source tables  
+- Stored Procedure loads data with truncate & insert (full load)  
+- **Purpose:** Maintain raw, unmodified copies of data
+
+### 3. Silver Layer (Data Cleaning & Transformation)
+- Normalized tables designed in `silver` schema  
+- Stored Procedure:
+  - Truncates tables  
+  - Inserts cleaned, standardized data from Bronze  
+- Added **data quality checks**: duplicates, nulls, consistency
+
+### 4. Gold Layer (Analytics-Ready Star Schema)
+- Created Fact & Dimension Views:
+  - `gold.dim_customers`  
+  - `gold.dim_products`  
+  - `gold.fact_sales`  
+- Views join and enrich Silver tables → **denormalized, business-ready data**
+
+### 5. Data Quality & Validation
+- Test scripts ensure:
+  - Referential integrity  
+  - Consistent keys across fact/dim tables  
+  - Valid ranges (e.g., no negative sales)
+
+### 6. Reporting & Analytics
+- Gold Views support dashboards (Power BI/Tableau)  
+- Example KPIs:
+  - 📈 Revenue by Country & Product   
+  - 💰 Top Customers by Lifetime Value  
+  - 🏆 Best-Performing Products
 
 ---
 
