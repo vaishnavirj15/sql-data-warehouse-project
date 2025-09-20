@@ -15,7 +15,7 @@ The workflow follows these major steps -:
 1. **Data Architecture** 🏗️  
    - Designed a **three-layer Medallion model** (Bronze, Silver, Gold) for scalability and clarity.  
    - Documented warehouse design with **ER diagrams & architecture flowcharts**.  
-   - ![Data Warehouse Architecture](documents/DataWarehouse_Architecture.png])
+    ![Data Warehouse Architecture](documents/DataWarehouse_Architecture.png)
 2. **ETL Pipelines** ⚙️  
    - Built **Stored Procedures** for automated ETL from CRM & ERP systems.  
    - Performed **data quality checks** (null handling, duplicates, referential integrity).  
