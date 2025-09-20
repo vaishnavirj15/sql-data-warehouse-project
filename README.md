@@ -2,6 +2,7 @@
 
 
 Welcome to the **Customer & Sales Data Warehouse Project** repository! 🚀
+
 This project demonstrates the design and implementation of a modern Data Warehouse using SQL Server for a bike retail business selling bikes, parts, clothing, and accessories.
 
 It covers the complete lifecycle of data engineering — from ETL (Extract, Transform, Load) pipelines, layered architecture (Bronze → Silver → Gold), and data modeling (star schema) to business-ready analytics.
