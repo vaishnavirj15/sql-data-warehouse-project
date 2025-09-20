@@ -71,54 +71,6 @@ SQL based analytics to deliver detailed insights.
 - **Sales Trend**
 
 ---
-# 🚴 Customer & Sales Data Warehouse Project
-
-Welcome to the **Customer & Sales Data Warehouse Project** repository! 🚀  
-This project demonstrates the design and implementation of a **modern Data Warehouse for a Bike Retail business** selling bikes, parts, clothing, and accessories.
-
-It covers the complete lifecycle of **data engineering** — from ETL (Extract, Transform, Load) pipelines, layered architecture (Bronze → Silver → Gold), and data modeling (star schema) to **business-ready analytics**.
-
-The goal is to showcase end-to-end skills in **data integration, warehousing, and reporting**, enabling insights such as **product performance, customer behavior, seasonal sales trends, and regional revenue distribution** to support data-driven decision-making.
-
----
-
-## 📖 Project Overview
-
-The workflow follows these major steps:
-
-### 1. Data Architecture 🏗️
-- Designed a **three-layer Medallion model** (Bronze, Silver, Gold) for scalability and clarity.  
-- Documented warehouse design with **ER diagrams & architecture flowcharts**.  
-- *(Insert Warehouse Architecture Diagram here: `documents/DataWarehouse_Architecture.png`)*
-
-### 2. ETL Pipelines ⚙️
-- Built **Stored Procedures** for automated ETL from CRM & ERP systems.  
-- Performed **data quality checks** (null handling, duplicates, referential integrity).  
-- Integrated multiple data sources into a single warehouse.
-
-### 3. Data Modeling 📊
-- Developed a **star schema** with `fact_sales`, `dim_customers`, `dim_products`, `dim_location`, and `dim_date`.  
-- Created **business-friendly views** in the Gold layer.
-
-### 4. Analytics & Reporting 📈
-- Delivered insights on:
-  - 🛒 **Customer Behavior** → repeat buyers, customer segmentation  
-  - 🚲 **Product Performance** → top-selling categories (bikes, clothing, accessories)  
-  - 📆 **Sales Trends** → seasonal demand & regional distribution
-
----
-
-## 🔑 Key Features
-
-✔️ Bronze–Silver–Gold architecture (industry standard)  
-✔️ Automated ETL using Stored Procedures (truncate + insert strategy)  
-✔️ Star Schema Design with fact & dimension tables  
-✔️ Data Quality Checks at Silver & Gold stages  
-✔️ Business-ready Views for Power BI/Tableau dashboards  
-✔️ End-to-End Flow: ETL → Modeling → Analytics  
-✔️ Industry-specific insights for Bike Retail (bikes, parts, clothing, accessories)
-
----
 
 ## ⚙️ Process Breakdown
 
@@ -194,7 +146,12 @@ The workflow follows these major steps:
 
 ├── /test                     # Data integrity & quality check scripts  
 │   ├── quality_check.gold.sql  
-│   └── quality_check.silver.sql  
+│   └── quality_check.silver.sql
+
+├── /eda                     # Exploratory data analysis scripts  
+│    ├── /basic eda
+       
+│    ├──reports
 
 └── README.md                 # Project overview  
 
@@ -202,6 +159,68 @@ The workflow follows these major steps:
 
 
 ---
+
+## 📊 EDA & Business Insights
+
+The dataset represents a **Bike Retail business**. Key insights include:
+
+### Product Categories and Subcategories
+- Bikes, parts, clothing, and accessories  
+- Segmented by revenue: high-performing, mid-range, low-performing
+
+### Customer Segments
+- Segmentation: VIP, Regular, New
+
+### Geographic Spread
+- Sales distribution across countries (if present in dataset)
+
+### Seasonality
+- Bike sales peak in **year/months**
+
+### Top Revenue Drivers
+- Highest revenue-generating categories: Bikes vs Clothing vs Accessories
+- Highest revenue-generating products
+
+---
+
+## 📝 Reports & KPIs
+
+### Customer Report
+**Purpose:** Track key customer metrics & behavior
+
+**Highlights:**
+1. Gather fields: name, age, transaction details  
+2. Segment customers: VIP, Regular, New  
+3. Aggregate metrics:
+   - Total orders  
+   - Total sales  
+   - Total quantity purchased  
+   - Total products  
+   - Lifespan (months)  
+4. Calculate KPIs:
+   - Recency (months since last order)  
+   - Average order value (AOV)  
+   - Average monthly spend
+
+### Product Report
+**Purpose:** Track product metrics & behavior
+
+**Highlights:**
+1. Gather fields: product name, category, subcategory, cost  
+2. Segment products by revenue: high, mid, low performers  
+3. Aggregate metrics:
+   - Total orders  
+   - Total sales  
+   - Total quantity sold  
+   - Total customers (unique)  
+   - Lifespan (months)  
+4. Calculate KPIs:
+   - Recency (months since last sale)  
+   - Average order revenue (AOR)  
+   - Average monthly revenue
+
+---
+
 ## 👩‍💻 About Me  
 
 I’m **Vaishnavi Raj**, a 2025 **B.Tech (Information Technology)** graduate from **Birla Institute of Technology, Mesra**.  
